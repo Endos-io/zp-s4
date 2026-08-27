@@ -1,13 +1,3 @@
-ci:
-  autoupdate_commit_msg: "chore: update pre-commit hooks"
-  autoupdate_schedule: "monthly"
-  autofix_prs: false
-  # mypy runs as a `language: system` hook via `uv run mypy`, which needs `uv`
-  # and the repo checkout to resolve the dev environment from `uv.lock` —
-  # unavailable on pre-commit.ci's runners. It is covered instead by the Lint
-  # GitHub Actions workflow and by local prek runs.
-  skip: [mypy]
-
 default_stages: [pre-commit, pre-push]
 
 default_language_version:
